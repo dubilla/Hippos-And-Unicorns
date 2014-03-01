@@ -17,6 +17,7 @@ angular.module('hipposAndUnicornsApp')
               q: randomAnimal,
               safe: 'active',
               callback: 'JSON_CALLBACK',
+              imgsz: 'small|medium|large|xlarge',
               start: Math.floor(Math.random() * 20)
             }
           });
