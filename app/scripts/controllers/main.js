@@ -2,7 +2,8 @@
 
 angular.module('hipposAndUnicornsApp')
   .controller('MainCtrl', function ($scope, Animal) {
-    // $scope.animal = animal.getAnimal();
-    debugger
-    $scope.what = Animal.getAnimal();
+    Animal.getAnimal()
+      .then(function(data) {
+        $scope.imageSrc = data.data.responseData.results[0].url
+      });
   });
